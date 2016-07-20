@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Personauth Demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" >
+        <link rel="stylesheet" href="/style.css" >
+    </head>
+    <body>
+        <h1>Welcome to Personauth</h1>
+
+        <section id="intro">
+            <p>Personauth is a self-hostable, external auth service. Spiritual successor to Browserid/Persona, it enables sites to have user logins without storing passwords.</p>
+        </section>
+
+        <section id="test">
+        <p>Try it out:</p>
+
+        <% if ! authorized? %>
+            <%= render_login_button %>
+        <% else %>
+            <section>You are logged in as <%= authorized_email %> <form id="logout" action="<%= url '/logout' %>" method="POST"><button type="submit">Logout</button></form></section>
+            <section id="explanation">
+                <p>You saw what happened. Actually, you know more than me. Depending on the email adress entered, you either got a confirmation email and had to click on a link, or you got presented an OpenID auth-dialog of your mail hoster that asked for confirmation.</p>
+
+                <p>It is supposed to decide automatically the best available option.</p>
+            </section>
+        <% end %>
+        </section>
+
+        <section id="more">
+            To get more information, head over to the <a href="https://github.com/letsauth/letsauth.github.io">github repo</a>. We are also still looking for help. Whether you want to work on the core, the documentation or to implement a module for your favorite framework, get in touch at <code>#letsauth</code> on Freenode.
+        </section>
+    
+    </body>
+</html>
