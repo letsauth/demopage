@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="/style.css" >
     </head>
     <body>
+        <% if !authorized? %>
+            <a href="/login" id="login">Login</a>
+        <% else %>
+            <form id="logout_top" action="<%= url '/logout' %>" method="POST"><button type="submit">Logout</button></form>
+        <% end %>
         <h1>Welcome to Personauth</h1>
 
         <section id="intro">
@@ -14,11 +19,11 @@
         </section>
 
         <section id="test">
-        <p>Try it out:</p>
+        <% if !authorized? %>
+            <p>Try it out by <a href="/login">logging in</a>.</p>
+        <% end %>
 
-        <% if ! authorized? %>
-            <%= render_login_button %>
-        <% else %>
+        <% if authorized? %>
             <section>You are logged in as <%= authorized_email %> <form id="logout" action="<%= url '/logout' %>" method="POST"><button type="submit">Logout</button></form></section>
             <section id="explanation">
                 <p>You saw what happened. Actually, you know more than me. Depending on the email adress entered, you either got a confirmation email and had to click on a link, or you got presented an OpenID auth-dialog of your mail hoster that asked for confirmation.</p>
@@ -29,7 +34,7 @@
         </section>
 
         <section id="more">
-            To get more information, head over to the <a href="https://github.com/letsauth/letsauth.github.io">github repo</a>. We are also still looking for help. Whether you want to work on the core, the documentation or to implement a module for your favorite framework, get in touch at <code>#letsauth</code> on Freenode.
+            <p>To get more information, head over to the <a href="https://github.com/letsauth/letsauth.github.io">github repo</a>. We are also still looking for help. Whether you want to work on the core, the documentation or to implement a module for your favorite framework, get in touch at <code>#letsauth</code> on Freenode.</p>
         </section>
     
     </body>

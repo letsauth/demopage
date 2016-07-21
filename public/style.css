@@ -29,14 +29,35 @@ p {
     hyphens: auto;
 }
 
-#logout {
-    display: inline-block;
-}
-
 a {
     color: #049aea;
 }
 
 a:visited {
     color: #ea5504;
+}
+
+button {
+    cursor: pointer;
+}
+
+#login, #logout_top {
+    float: right;
+    margin-right: 1em;
+}
+
+#logout_top button {
+    border: 0;
+    background: none;
+    color: #049aea;
+}
+
+#logout {
+    display: inline-block;
+}
+
+#login_form form {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
 }
