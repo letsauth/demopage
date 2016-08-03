@@ -8,12 +8,12 @@ html {
 }
 
 body {
-    background-color: rgba(5, 66, 99, 0.5);
+    background-color: rgba(5, 66, 99, 0.8);
     max-width: 800px;
     margin: auto;
     padding: 1em;
     margin-top: 1em;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 section {
@@ -77,5 +77,5 @@ button {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-    background: rgba(0,0,0, 0.5);
+    background: rgba(0,0,0, 0.3);
 }
