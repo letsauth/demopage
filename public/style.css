@@ -56,8 +56,26 @@ button {
     display: inline-block;
 }
 
+#login_form {
+    padding-bottom: 3em;
+}
+
+#login_form h1 {
+    text-align: left;
+    margin-top: 0;
+}
+
 #login_form form {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    text-align: center;
+    margin-top: 2em;
+}
+
+#login_form div {
+    padding: 1em;
+    padding-bottom: 2em;
+    text-align: left;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    background: rgba(0,0,0, 0.5);
 }
