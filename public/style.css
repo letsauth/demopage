@@ -1,5 +1,5 @@
 html {
-    background-image: url("background2_tiny.jpg");
+    background-image: url("background3_tiny.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgb(5, 66, 99);
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-color: rgba(5, 66, 99, 0.8);
+    background-color: rgba(5, 66, 99, 0.95);
     max-width: 800px;
     margin: auto;
     padding: 1em;
