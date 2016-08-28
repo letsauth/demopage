@@ -79,3 +79,13 @@ button {
     border-radius: 10px;
     background: rgba(0,0,0, 0.3);
 }
+
+#test {
+    border: 3px outset white;
+    text-align: center;
+}
+
+#test_logged {
+    border: 3px outset white;
+    text-align: justify;
+}
