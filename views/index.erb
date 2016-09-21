@@ -4,9 +4,11 @@
         <title>Portier Demo</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width" >
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
         <link rel="stylesheet" href="/style.css" >
     </head>
     <body>
+        <main>
         <% if !authorized? %>
             <a href="/login" id="login">Login</a>
         <% else %>
@@ -39,6 +41,6 @@
         <section id="more">
             <p>To get more information, head over to the <a href="https://portier.github.io/">project site</a>. We are also still looking for help. Whether you want to work on the core, the documentation or to implement a module for your favorite framework, get in touch at <code>#portier</code> on Freenode.</p>
         </section>
-    
+        </main>
     </body>
 </html>
